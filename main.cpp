@@ -12,7 +12,7 @@ int main() {
     while(true) {
         std::cout << "CppLisp >> ";
         std::cin >> stdin;
-        std::cout << stdin << std::endl;
+        std::cout << "No you're a " << stdin << std::endl;
     }
 
     return 0;
