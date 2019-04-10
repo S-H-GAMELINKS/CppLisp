@@ -1,17 +1,21 @@
 #include <iostream>
-#include <string>
+
+#include <readline/readline.h>
+#include <readline/history.h>
 
 int main() {
 
-    std::string stdin;
+    char* stdin;
 
     // Print CppLisp Version
     std::cout << "CppLisp Version 0.0.0.1" << std::endl;
     std::cout << "Press Ctrl + C to Exit" << std::endl;
 
     while(true) {
-        std::cout << "CppLisp >> ";
-        std::cin >> stdin;
+        stdin = readline("CppLisp >> ");
+
+        add_history(stdin);
+
         std::cout << "No you're a " << stdin << std::endl;
     }
 
