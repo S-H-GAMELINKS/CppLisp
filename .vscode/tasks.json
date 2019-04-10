@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cmd",
+            "args": ["/C", "docker rmi cpp-lisp && docker build -t cpp-lisp . && docker run --rm --name cpp-lisp -i -p 3000:3000 -t cpp-lisp"],
+        }
+    ]
+}
